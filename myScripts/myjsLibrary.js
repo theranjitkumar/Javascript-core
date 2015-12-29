@@ -1,12 +1,12 @@
 (function(){
-console.log("i am clled imadiate function or self invoking function or self excuting function");
+	console.log("i am clled imadiate function or self invoking function or self excuting function");
 }());
 
 (function () {    
 var returnedValue = (function (message) {
     return message;
 }('Hello Ranjit'));
-console.log(returnedValue); // will write hello in the console
+	console.log(returnedValue); // will write hello in the console
 }());
 
 
