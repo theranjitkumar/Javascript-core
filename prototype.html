@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<div id="app">
+	<p id="p">  </p>
+
+	<a href="javascript:void(0)" onclick="fun(empUser.userInfo())">Employee info</a>
+
+	<a href="javascript:void(0)" onclick="fun(adminUser.userInfo())">Admin info</a>
+
+
+</div>
+
+<script type="text/javascript">
+
+var div = document.getElementById('div');
+var p = document.getElementById('p');
+
+function fun(x){
+	p.innerHTML = ""+x;
+}
+
+
+var app = app || {};
+
+app.users = function (id, name, city) {
+	
+	this.id = id;
+	this.name = name;
+	this.city = city;
+}
+
+app.users.prototype.userInfo = function() {
+	return "Mr. "+this.name+" from "+this.city;
+};
+
+
+var adminUser = new app.users("101","Admin","Delhi");
+var empUser = new app.users("101","Employee","Patna");
+
+
+empUser.userInfo();
+
+
+</script>
+</body>
+
+</html>
