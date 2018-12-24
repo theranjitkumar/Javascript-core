@@ -1,10 +1,4 @@
-var isPalindrome = function (string) {
-    if (string == string.split('').reverse().join('')) {
-        alert(string + ' is palindrome.');
-    }
-    else {
-        alert(string + ' is not palindrome.');
-    }
+function isPalindrome(s) {
+    return s == s.split("").reverse().join("") ? 'palindrome' : 'not palindrome';
 }
-
-isPalindrome('12321');
+alert(isPalindrome('noon'));
