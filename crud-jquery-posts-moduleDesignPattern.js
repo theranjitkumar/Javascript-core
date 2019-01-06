@@ -1,5 +1,4 @@
-
-var m = m || {};
+var m = m || {}; // define if doesn't exist
 m.postsModule = function(){
 	this.name = "Posts Module";
 	this.moduleDetail = function(){
@@ -55,7 +54,6 @@ m.postsModule = function(){
 		  method: 'DELETE'
 		});
 	}
-
 }
 
 var postsObj = new m.postsModule();
