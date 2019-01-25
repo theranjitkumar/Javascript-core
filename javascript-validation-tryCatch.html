@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Please input a number between 5 and 10:</p>
+
+<input id="demo" type="text" oninput="validateInput(this.value)">
+<button type="button" onclick="validateInput()">Test Input</button>
+<p id="message"></p>
+
+<script>
+function validateInput(inputValue) {
+    var message, x;
+    message = document.getElementById("message");
+    message.innerHTML = "";
+    x = document.getElementById("demo").value || inputValue;
+    try {
+        if(x == "")  throw "is Empty";
+        if(isNaN(x)) throw "not a number";
+        if(x > 10)   throw "too high";
+        if(x < 5)    throw "too low";
+    }
+    catch(err) {
+        message.innerHTML = "input value is " + err;
+    }
+}
+</script>
+
+</body>
+</html>
